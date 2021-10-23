@@ -1,3 +1,23 @@
+
+@font-face {
+     font-family: "Roboto";
+     src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+          url("../fonts/Roboto-Regular.woff") format("woff");
+     font-weight: normal;
+     font-style: normal;
+     font-display: swap;
+}
+
+@font-face {
+     font-family: "Roboto";
+     src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+          url("../fonts/Roboto-Bold.woff") format("woff");
+     font-weight: bold;
+     font-style: normal;
+     font-display: swap;
+}
+
+
 /* Global  */
 
 html{
@@ -17,9 +37,9 @@ body{
      padding: 0;
      margin: 0;
      display: flex;
-     font-size: 16px;
-     line-height: 1.5 ;
-     font-family: "Arial", sans-serif;
+     font-size: 15px;
+     /* line-height: 1.5 ; */
+     font-family: "Roboto","Arial", sans-serif;
      flex-direction: column;
      height: 100%;
      background-color: #fff;
@@ -34,14 +54,85 @@ img{
 /* CONTAINER  */
 .container{
      width: 100%;
-     min-width: 1200px;
+     max-width: 1000px;
      margin-left: auto;
      margin-right: auto;
-     padding-left: 50px;
-     padding-right: 50px;
+     padding-left: 125px;
+     padding-right: 125px;
 }
 
 /* Main content  */
 .main-content{
      flex-grow: 1;
+}
+
+/* Site Header  */
+.site-header {
+     margin-top: 30px;
+}
+.site-header-top {
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.site-header-logo {
+     display: flex;
+}
+.site-header-logo:hover{
+     opacity: 0.8;
+}
+.site-header-logo:active{
+     opacity: 0.6;
+}
+
+/* Site Nav  */
+.sitenav {
+     margin-top: 6px;
+     margin-bottom: 6px;
+     font-size: 15px;
+     line-height: normal;
+     font-weight: 400;
+     font-family: "Roboto","Arial", sans-serif;
+}
+.sitenav-list {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+}
+.sitenav-items:not(:last-child) {
+     margin-right: 30px;
+
+}
+.sitenav-items{
+     padding-bottom: 6px;
+}
+.sitenav-items:last-child{
+     margin-left: 10px;
+}
+
+.sitenav-items:hover{
+     border-bottom: 3px solid #333333;
+}
+.sitenav-items:last-child:hover{
+     border-bottom: 1px solid #333333;
+}
+.sitenav-link {
+     display: block;
+     text-decoration: none;
+     color: #333333;
+
+}
+.sitenav-link:hover{
+     opacity: 0.8;
+}
+.sitenav-link:active{
+     opacity: 0.6;
+}
+.last-child{
+     color: #666666;
 }
